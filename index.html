@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>打字机</title>
+    <style>
+      body{
+        background-color:#010404;
+        color:#5dfff8;
+      }
+    p::after{
+      content:"";
+     } 
+    </style>
+  </head>
+  <body>	
+	  <p id="p"></p>
+   <script>
+   let str = "花E工作室室"
+   let i = 0
+   let timer = setInterval(()=>{
+     p.innerText += str[i]
+     i++
+     if(i == str.length-1){
+     clearInterval(timer)
+     }
+    },200)
+   </script>
+  </body>
+</html>
